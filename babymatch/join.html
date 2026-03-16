@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join BabyMatch</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #FFF4E6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 24px;
+            padding: 40px 32px;
+            max-width: 380px;
+            width: 100%;
+            box-shadow: 0 8px 32px rgba(255, 107, 107, 0.15);
+            text-align: center;
+        }
+        .hearts { font-size: 48px; margin-bottom: 16px; }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #FF6B6B;
+            margin-bottom: 8px;
+        }
+        .tagline {
+            color: #4A5568;
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+        .invite-info {
+            background: #FFF4E6;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+        .invite-info p {
+            color: #4A5568;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .invite-code {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2D3748;
+            letter-spacing: 2px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            margin-bottom: 12px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary {
+            background: #FF6B6B;
+            color: white;
+            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+        }
+        .btn-secondary {
+            background: #FFF4E6;
+            color: #FF6B6B;
+            border: 2px solid #FFE8D6;
+        }
+        .footer {
+            margin-top: 16px;
+            color: #718096;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hearts">💕</div>
+        <h1>BabyMatch</h1>
+        <p class="tagline">Your partner invited you to find the perfect baby name together!</p>
+
+        <div class="invite-info">
+            <p>Your invite code:</p>
+            <div class="invite-code" id="code">---</div>
+        </div>
+
+        <a id="open-app" class="btn btn-primary" href="#">Open in BabyMatch</a>
+        <a class="btn btn-secondary" href="https://apps.apple.com/app/babymatch/idXXXXXXXXXX">Download BabyMatch</a>
+
+        <p class="footer">Open the app and enter the code above to connect with your partner.</p>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+
+        if (code) {
+            document.getElementById('code').textContent = code;
+            const deepLink = 'babymatch://connect?code=' + encodeURIComponent(code);
+            document.getElementById('open-app').href = deepLink;
+
+            // Auto-attempt to open the app
+            setTimeout(() => { window.location.href = deepLink; }, 500);
+        }
+    </script>
+</body>
+</html>
