@@ -98,20 +98,35 @@
         <a id="open-app" class="btn btn-primary" href="#">Open in BabyMatch</a>
         <a class="btn btn-secondary" href="https://apps.apple.com/app/babymatch/idXXXXXXXXXX">Download BabyMatch</a>
 
-        <p class="footer">Open the app and enter the code above to connect with your partner.</p>
+        <p class="footer" id="footer-text">Open the app and enter the code above to connect with your partner.</p>
     </div>
 
     <script>
         const params = new URLSearchParams(window.location.search);
         const code = params.get('code');
 
+        function openApp() {
+            const deepLink = 'babymatch://connect?code=' + encodeURIComponent(code);
+            window.location.href = deepLink;
+            // Try to close the tab after the app opens
+            setTimeout(() => {
+                window.close();
+                // If close didn't work, show a message
+                document.getElementById('footer-text').textContent = 'You can close this tab now.';
+            }, 1000);
+        }
+
         if (code) {
             document.getElementById('code').textContent = code;
             const deepLink = 'babymatch://connect?code=' + encodeURIComponent(code);
             document.getElementById('open-app').href = deepLink;
+            document.getElementById('open-app').addEventListener('click', function(e) {
+                e.preventDefault();
+                openApp();
+            });
 
             // Auto-attempt to open the app
-            setTimeout(() => { window.location.href = deepLink; }, 500);
+            setTimeout(openApp, 500);
         }
     </script>
 </body>
