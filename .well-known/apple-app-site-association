@@ -6,7 +6,7 @@
         "appIDs": ["7Q93UA28F8.com.diegoguaj.babymatch"],
         "components": [
           {
-            "/": "/babymatch/join*",
+            "/": "/join*",
             "comment": "Partner invite deep links"
           }
         ]
