@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use | Baby Names for Couples</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --coral:      #FF6B6B;
+      --coral-soft: #FFE8E8;
+      --coral-mid:  #FF9494;
+      --yellow:     #FFD93D;
+      --green:      #6BCB77;
+      --blue:       #74B3CE;
+      --pink:       #FFB3C1;
+      --bg:         #FFF9F5;
+      --bg2:        #FFF3EC;
+      --text:       #2D2D2D;
+      --muted:      #8A7F7A;
+      --border:     #F0E6DF;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 10% 0%, rgba(255,107,107,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 90% 100%, rgba(116,179,206,0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 50% 50%, rgba(255,217,61,0.05) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hearts {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .heart {
+      position: absolute;
+      opacity: 0;
+      animation: floatHeart linear infinite;
+      font-size: 14px;
+      filter: blur(0.5px);
+    }
+    .heart:nth-child(1)  { left: 8%;   animation-delay: 0s;   animation-duration: 18s; font-size: 10px; }
+    .heart:nth-child(2)  { left: 18%;  animation-delay: 3s;   animation-duration: 22s; font-size: 16px; }
+    .heart:nth-child(3)  { left: 32%;  animation-delay: 7s;   animation-duration: 16s; font-size: 8px;  }
+    .heart:nth-child(4)  { left: 50%;  animation-delay: 1s;   animation-duration: 25s; font-size: 12px; }
+    .heart:nth-child(5)  { left: 65%;  animation-delay: 5s;   animation-duration: 19s; font-size: 10px; }
+    .heart:nth-child(6)  { left: 78%;  animation-delay: 9s;   animation-duration: 21s; font-size: 14px; }
+    .heart:nth-child(7)  { left: 88%;  animation-delay: 2s;   animation-duration: 17s; font-size: 9px;  }
+    .heart:nth-child(8)  { left: 42%;  animation-delay: 12s;  animation-duration: 23s; font-size: 11px; }
+    @keyframes floatHeart {
+      0%   { bottom: -5%; opacity: 0; transform: translateX(0) scale(0.8) rotate(0deg); }
+      10%  { opacity: 0.25; }
+      50%  { transform: translateX(20px) scale(1) rotate(15deg); }
+      90%  { opacity: 0.15; }
+      100% { bottom: 105%; opacity: 0; transform: translateX(-10px) scale(0.9) rotate(-10deg); }
+    }
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    header {
+      position: relative;
+      text-align: center;
+      padding: 60px 0 48px;
+      animation: fadeDown 0.7s ease both;
+    }
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .logo-name {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--text);
+      letter-spacing: -0.3px;
+    }
+    .logo-name span { color: var(--coral); }
+    header h1 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: clamp(28px, 6vw, 42px);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .header-pill {
+      display: inline-block;
+      background: var(--coral-soft);
+      color: var(--coral);
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 5px 16px;
+      border-radius: 100px;
+      letter-spacing: 0.3px;
+      margin-bottom: 20px;
+    }
+    header p.subtitle {
+      font-size: 17px;
+      color: var(--muted);
+      font-style: italic;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 32px 0;
+      opacity: 0.5;
+    }
+    .divider-line { flex: 1; height: 1px; background: var(--border); }
+    .divider-heart { color: var(--coral); font-size: 12px; }
+    .summary-card {
+      background: white;
+      border: 1.5px solid var(--border);
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(255,107,107,0.07);
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+    .summary-card h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 18px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .summary-card h2::before {
+      content: '\2726';
+      color: var(--yellow);
+      font-size: 14px;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 500px) { .summary-grid { grid-template-columns: 1fr; } }
+    .summary-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .summary-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+    .dot-coral  { background: var(--coral); }
+    .dot-green  { background: var(--green); }
+    .dot-blue   { background: var(--blue); }
+    .dot-yellow { background: var(--yellow); }
+    .section {
+      margin-bottom: 36px;
+      animation: fadeUp 0.5s ease both;
+    }
+    .section:nth-child(2)  { animation-delay: 0.05s; }
+    .section:nth-child(3)  { animation-delay: 0.10s; }
+    .section:nth-child(4)  { animation-delay: 0.15s; }
+    .section:nth-child(5)  { animation-delay: 0.20s; }
+    .section:nth-child(6)  { animation-delay: 0.25s; }
+    .section:nth-child(7)  { animation-delay: 0.30s; }
+    .section:nth-child(8)  { animation-delay: 0.35s; }
+    .section:nth-child(9)  { animation-delay: 0.40s; }
+    .section:nth-child(10) { animation-delay: 0.45s; }
+    .section:nth-child(11) { animation-delay: 0.50s; }
+    .section:nth-child(12) { animation-delay: 0.55s; }
+    .section:nth-child(13) { animation-delay: 0.60s; }
+    .section:nth-child(14) { animation-delay: 0.65s; }
+    .section:nth-child(15) { animation-delay: 0.70s; }
+    .section:nth-child(16) { animation-delay: 0.75s; }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .section-number {
+      width: 32px;
+      height: 32px;
+      background: var(--coral-soft);
+      color: var(--coral);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+    .section h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--text);
+      letter-spacing: -0.2px;
+    }
+    .section p {
+      font-size: 15.5px;
+      color: #4A4240;
+      margin-bottom: 14px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+    .section ul {
+      margin: 10px 0 14px;
+      padding-left: 24px;
+      font-size: 15.5px;
+      color: #4A4240;
+      line-height: 1.8;
+    }
+    .section ul li { margin-bottom: 6px; }
+    .highlight {
+      border-left: 3px solid var(--coral);
+      background: var(--coral-soft);
+      border-radius: 0 12px 12px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 15px;
+      color: var(--text);
+    }
+    .highlight.green {
+      border-color: var(--green);
+      background: #F0FAF1;
+    }
+    .highlight.blue {
+      border-color: var(--blue);
+      background: #F0F7FA;
+    }
+    .contact-card {
+      background: linear-gradient(135deg, var(--coral) 0%, #FF9494 100%);
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      color: white;
+      margin-top: 48px;
+      box-shadow: 0 8px 32px rgba(255,107,107,0.25);
+      animation: fadeUp 0.6s 0.5s ease both;
+    }
+    .contact-card h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    .contact-card p {
+      font-size: 15px;
+      opacity: 0.9;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .contact-card a {
+      display: inline-block;
+      background: white;
+      color: var(--coral);
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      padding: 11px 28px;
+      border-radius: 100px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .contact-card a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    footer {
+      text-align: center;
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      font-family: 'Quicksand', sans-serif;
+    }
+    footer strong { color: var(--coral); }
+    footer a {
+      color: var(--coral);
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts" aria-hidden="true">
+    <div class="heart">&#9825;</div>
+    <div class="heart">&#9825;</div>
+    <div class="heart">&#9825;</div>
+    <div class="heart">&#9825;</div>
+    <div class="heart">&#9825;</div>
+    <div class="heart">&#9825;</div>
+    <div class="heart">&#9825;</div>
+    <div class="heart">&#9825;</div>
+  </div>
+  <div class="wrapper">
+    <header>
+      <div class="logo-mark">
+        <svg width="52" height="40" viewBox="0 0 52 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <radialGradient id="leftGrad" cx="40%" cy="40%" r="60%">
+              <stop offset="0%" stop-color="#FF8C8C"/>
+              <stop offset="100%" stop-color="#F06060"/>
+            </radialGradient>
+            <radialGradient id="rightGrad" cx="40%" cy="35%" r="60%">
+              <stop offset="0%" stop-color="#82CEDE"/>
+              <stop offset="100%" stop-color="#5AAECC"/>
+            </radialGradient>
+          </defs>
+          <circle cx="20" cy="20" r="13" fill="white"/>
+          <circle cx="20" cy="20" r="12" fill="url(#leftGrad)"/>
+          <circle cx="32" cy="20" r="13" fill="white"/>
+          <circle cx="32" cy="20" r="12" fill="url(#rightGrad)"/>
+          <circle cx="43" cy="30" r="4" fill="white"/>
+          <circle cx="43" cy="30" r="3" fill="#6BCB77"/>
+        </svg>
+        <span class="logo-name">Baby Names <span>for Couples</span></span>
+      </div>
+      <div class="header-pill">Terms of Use</div>
+      <h1>The fine print,<br>in plain English.</h1>
+      <p class="subtitle">Last updated: April 2026</p>
+    </header>
+    <div class="summary-card">
+      <h2>The short version</h2>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <div class="summary-dot dot-coral"></div>
+          <span>You must be at least 18 to use Baby Names for Couples</span>
+        </div>
+        <div class="summary-item">
+          <div class="summary-dot dot-green"></div>
+          <span>Your purchases are yours. Shared access with your partner is a feature, not a transfer</span>
+        </div>
+        <div class="summary-item">
+          <div class="summary-dot dot-blue"></div>
+          <span>The App is provided as-is and our liability is limited by law</span>
+        </div>
+        <div class="summary-item">
+          <div class="summary-dot dot-yellow"></div>
+          <span>These terms are governed by the laws of England and Wales</span>
+        </div>
+      </div>
+    </div>
+    <div class="divider"><div class="divider-line"></div><div class="divider-heart">&hearts;</div><div class="divider-line"></div></div>
+
+    <!-- Section 1: About these terms -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">1</div>
+        <h2>About these terms</h2>
+      </div>
+      <p>These Terms of Use (&ldquo;Terms&rdquo;) set out the rules for using Baby Names for Couples (the &ldquo;App&rdquo;). By downloading, installing, or using the App, you agree to be bound by these Terms. If you don&rsquo;t agree with any part of them, please don&rsquo;t use the App.</p>
+      <p>Baby Names for Couples is operated by an independent developer based in the United Kingdom. In these Terms, &ldquo;we,&rdquo; &ldquo;us,&rdquo; and &ldquo;our&rdquo; refer to Baby Names for Couples. &ldquo;You&rdquo; and &ldquo;your&rdquo; refer to the person using the App.</p>
+      <p>These Terms supplement Apple&rsquo;s standard Licensed Application End User Licence Agreement, which applies automatically to all apps distributed through the App Store. Where these Terms and Apple&rsquo;s standard agreement overlap, these Terms govern your specific use of Baby Names for Couples.</p>
+    </div>
+
+    <!-- Section 2: Who can use the App -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">2</div>
+        <h2>Who can use the App</h2>
+      </div>
+      <p>You must be at least 18 years old to use Baby Names for Couples, and you must have the legal capacity to enter into a binding agreement. By using the App, you confirm that you meet both of these requirements.</p>
+      <p>Baby Names for Couples is designed for adults, specifically people thinking about baby names for a future or current child. It is not intended for children and is not directed at minors.</p>
+    </div>
+
+    <!-- Section 3: Your licence to use the App -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">3</div>
+        <h2>Your licence to use the App</h2>
+      </div>
+      <p>We grant you a limited, personal, non-transferable, non-exclusive, revocable licence to download and use Baby Names for Couples on any Apple device that you own or control, strictly for your own personal, non-commercial use.</p>
+      <p>We own all intellectual property rights in the App, including its design, content, name database, code, icons, and branding. Nothing in these Terms transfers any of those rights to you. You may not copy, modify, distribute, sell, lease, sublicense, reverse-engineer, decompile, or attempt to extract the source code of the App, except to the extent that applicable law expressly permits despite this restriction.</p>
+    </div>
+
+    <!-- Section 4: Acceptable use -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">4</div>
+        <h2>Acceptable use</h2>
+      </div>
+      <p>When you use Baby Names for Couples, you agree not to:</p>
+      <ul>
+        <li>Use the App for any unlawful purpose, or in any way that breaches applicable laws or regulations</li>
+        <li>Enter a display name, invite code, or any other content that is offensive, harassing, defamatory, obscene, hateful, or that impersonates another person</li>
+        <li>Use the partner pairing feature to harass, abuse, stalk, or deceive another person</li>
+        <li>Share invite codes publicly or with people you do not know in real life</li>
+        <li>Attempt to gain unauthorised access to other users&rsquo; data, the App&rsquo;s backend, or any connected system</li>
+        <li>Interfere with or disrupt the App, its servers, or any networks connected to it</li>
+        <li>Use any automated means (bots, scripts, scrapers) to interact with the App or to extract its name database</li>
+        <li>Attempt to circumvent any in-app purchase, entitlement, or access control</li>
+        <li>Use the App to transmit any malicious code, viruses, or harmful material</li>
+      </ul>
+      <p>We take these rules seriously. If we believe you have breached them, we may suspend or terminate your access to the App at our sole discretion, with or without notice.</p>
+    </div>
+
+    <!-- Section 5: User content -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">5</div>
+        <h2>User content</h2>
+      </div>
+      <p>The App lets you enter a display name and create or enter invite codes to pair with a partner. Anything you enter into the App is referred to in these Terms as &ldquo;your content.&rdquo;</p>
+      <p>You keep ownership of your content. By entering it into the App, you grant us a worldwide, royalty-free, non-exclusive licence to store, transmit, display, and process it strictly for the purpose of operating the App. For example, we may display your name to the partner you have connected with.</p>
+      <p>You are solely responsible for your content. You represent and warrant that you have the right to enter it, that it does not infringe anyone else&rsquo;s rights, and that it complies with the acceptable use rules in Section 4.</p>
+      <p>We reserve the right to remove any content we believe breaches these Terms or applicable law, without prior notice.</p>
+    </div>
+
+    <!-- Section 6: In-app purchases -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">6</div>
+        <h2>In-app purchases</h2>
+      </div>
+      <p>Baby Names for Couples offers optional one-time in-app purchases that unlock additional name collections and features. All payments are processed by Apple through the App Store, and Apple&rsquo;s own payment terms apply to every transaction.</p>
+      <div class="highlight green">
+        <strong>Purchases belong to the purchaser.</strong> When you buy a collection or bundle, that purchase is linked to your account. If you are connected with a partner at the time, your partner receives shared access to the unlocked content as a feature of the App, not as a transfer of ownership. If the couple connection ends, shared access is revoked and only the original purchaser retains access. Your partner would need to make their own purchase to regain access independently.
+      </div>
+      <p>All in-app purchases are one-time and non-consumable. There are no subscriptions and no recurring charges. Purchases do not expire.</p>
+      <div class="highlight blue">
+        <strong>Cooling-off period.</strong> In-app purchases are digital content that is made available to you immediately. By completing a purchase through Apple&rsquo;s StoreKit, you expressly consent to immediate supply of the content and acknowledge that you lose your statutory 14-day right of withdrawal as soon as the content is made available. This is a standard condition for digital content under UK and EU consumer law.
+      </div>
+      <p>Refunds for in-app purchases are handled exclusively by Apple through its standard App Store refund process. We are not able to issue refunds directly. If you believe you are entitled to a refund, please request one via <a href="https://reportaproblem.apple.com" style="color: var(--coral);">reportaproblem.apple.com</a>.</p>
+      <p>We may add, remove, or change the price of in-app purchases at any time. Any price change only affects future purchases. Purchases you have already made are not affected.</p>
+    </div>
+
+    <!-- Section 7: Suspension and termination -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">7</div>
+        <h2>Suspension and termination</h2>
+      </div>
+      <p>We may suspend or terminate your access to Baby Names for Couples at any time, with or without notice, if we believe you have breached these Terms, if your use of the App poses a risk to us or to other users, or if we are required to do so by law.</p>
+      <p>You may stop using the App at any time by deleting it from your device. If you want to remove your data from our servers, use the Delete Account option in the Profile tab of the App. See our <a href="/privacy" style="color: var(--coral);">Privacy Policy</a> for more on data deletion.</p>
+      <p>Termination does not affect any rights or obligations that have already accrued, and the sections of these Terms that by their nature should survive termination will continue to apply. These include intellectual property, disclaimers, limitation of liability, indemnification, and governing law.</p>
+    </div>
+
+    <!-- Section 8: Third-party services -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">8</div>
+        <h2>Third-party services</h2>
+      </div>
+      <p>Baby Names for Couples relies on services provided by third parties, including Apple (for the App Store, in-app purchases, push notifications, and text-to-speech) and cloud infrastructure providers used for storage and partner pairing. We don&rsquo;t control these services and we are not responsible for their availability, performance, or practices.</p>
+      <p>Your use of third-party services through the App is subject to the terms and privacy policies of those providers. Outages, changes, or the discontinuation of any third-party service may affect how the App works, and we accept no liability for losses that result from those events.</p>
+    </div>
+
+    <!-- Section 9: Disclaimer of warranties -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">9</div>
+        <h2>Disclaimer of warranties</h2>
+      </div>
+      <p>Baby Names for Couples is provided &ldquo;as is&rdquo; and &ldquo;as available.&rdquo; To the fullest extent permitted by law, we disclaim all warranties of any kind, whether express, implied, or statutory, including any warranties of merchantability, fitness for a particular purpose, accuracy, non-infringement, or uninterrupted operation.</p>
+      <p>We do not warrant that the App will meet your requirements, that it will be available at any particular time, that it will be free from errors or defects, that any information it provides (including name meanings, origins, or popularity trends) is accurate or complete, or that any agreement you reach with your partner about a baby name will be the right one for you.</p>
+      <div class="highlight">
+        Nothing in this section affects any statutory rights you have as a consumer that cannot be excluded or limited under applicable law. If you are a UK or EU consumer, your statutory rights remain unaffected.
+      </div>
+    </div>
+
+    <!-- Section 10: Limitation of liability -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">10</div>
+        <h2>Limitation of liability</h2>
+      </div>
+      <p>To the fullest extent permitted by law, we will not be liable to you for any indirect, incidental, consequential, special, exemplary, or punitive damages arising out of or in connection with your use of Baby Names for Couples. This includes, without limitation, loss of profits, loss of data, loss of goodwill, loss of opportunity, emotional distress, or disputes arising between you and your partner over name choices.</p>
+      <p>Our total aggregate liability to you for any and all claims arising out of or relating to these Terms or your use of the App is limited to the greater of:</p>
+      <ul>
+        <li>The total amount you have paid to us (via Apple) for in-app purchases in the twelve months immediately before the event giving rise to the claim; or</li>
+        <li>GBP &pound;30.</li>
+      </ul>
+      <p>Nothing in these Terms excludes or limits our liability for death or personal injury caused by our negligence, fraud or fraudulent misrepresentation, any liability that cannot be excluded or limited under applicable law, or your statutory rights as a consumer under UK or EU law.</p>
+    </div>
+
+    <!-- Section 11: Indemnification -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">11</div>
+        <h2>Indemnification</h2>
+      </div>
+      <p>You agree to indemnify and hold us harmless from and against any claims, losses, damages, liabilities, costs, and expenses (including reasonable legal fees) that arise from or relate to your use of the App in breach of these Terms, your content, or your violation of any law or the rights of a third party. This obligation does not apply to the extent that any claim results from our own negligence or wilful misconduct.</p>
+    </div>
+
+    <!-- Section 12: Changes to the service -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">12</div>
+        <h2>Changes to the service</h2>
+      </div>
+      <p>We are constantly improving Baby Names for Couples. We reserve the right to modify, add, remove, suspend, or discontinue any feature of the App at any time, with or without notice, and without liability to you. This includes specific name collections, partner pairing functionality, or any other part of the App.</p>
+    </div>
+
+    <!-- Section 13: Changes to these terms -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">13</div>
+        <h2>Changes to these terms</h2>
+      </div>
+      <p>We may update these Terms from time to time as the App evolves or as the law changes. When we do, we will update the &ldquo;Last updated&rdquo; date at the top of this page.</p>
+      <p>Continued use of Baby Names for Couples after any changes constitutes your acceptance of the updated Terms. If you don&rsquo;t agree with the changes, you should stop using the App.</p>
+    </div>
+
+    <!-- Section 14: Governing law and jurisdiction -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">14</div>
+        <h2>Governing law and jurisdiction</h2>
+      </div>
+      <p>These Terms and any dispute or claim arising out of or in connection with them, including your use of Baby Names for Couples, are governed by and construed in accordance with the laws of England and Wales.</p>
+      <p>Any dispute shall be subject to the exclusive jurisdiction of the courts of England and Wales, except where the mandatory consumer protection laws of your country of residence give you the right to bring proceedings in your local courts or to benefit from provisions that cannot be derogated from by agreement. In those cases, your local consumer rights remain available to you.</p>
+    </div>
+
+    <!-- Section 15: General -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-number">15</div>
+        <h2>General</h2>
+      </div>
+      <p>These Terms, together with our <a href="/privacy" style="color: var(--coral);">Privacy Policy</a>, constitute the entire agreement between you and us regarding Baby Names for Couples and supersede any prior agreements on the same subject.</p>
+      <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will continue in full force and effect. Our failure to enforce any right or provision of these Terms will not be considered a waiver of that right or provision.</p>
+      <p>You may not assign or transfer these Terms or any of your rights or obligations under them without our prior written consent. We may assign these Terms at any time without notice.</p>
+      <p>For any legal notices, questions about these Terms, or concerns about the App, you can reach us at <a href="mailto:help@babynamesforcouples.com" style="color: var(--coral);"><strong>help@babynamesforcouples.com</strong></a>.</p>
+    </div>
+
+    <div class="contact-card">
+      <h2>Questions about these terms?</h2>
+      <p>We&rsquo;re happy to explain anything that&rsquo;s unclear. Get in touch any time.</p>
+      <a href="mailto:help@babynamesforcouples.com">help@babynamesforcouples.com</a>
+      <p style="opacity: 0.85; margin-top: 20px; margin-bottom: 12px; font-size: 14px;">You can also read our privacy policy or visit support.</p>
+      <a href="/privacy" style="background: rgba(255,255,255,0.2); color: white; border: 1.5px solid rgba(255,255,255,0.6); margin-right: 8px;">Privacy Policy</a>
+      <a href="/" style="background: rgba(255,255,255,0.2); color: white; border: 1.5px solid rgba(255,255,255,0.6);">Support</a>
+    </div>
+    <footer>
+      <p>&copy; 2026 <strong>Baby Names for Couples</strong>. Made with &hearts; for parents everywhere.</p>
+    </footer>
+  </div>
+</body>
+</html>
