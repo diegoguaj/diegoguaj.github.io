@@ -2,11 +2,403 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=/" />
-  <title>Support &mdash; Baby Names for Couples</title>
-  <link rel="canonical" href="https://babynamesforcouples.com/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support | Baby Names for Couples</title>
+  <meta name="description" content="Get help with Baby Names for Couples. Answers to common questions about pairing, swiping, purchases, data, and more." />
+  <link rel="canonical" href="https://babynamesforcouples.com/support" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --coral:      #FF6B6B;
+      --coral-soft: #FFE8E8;
+      --coral-mid:  #FF9494;
+      --yellow:     #FFD93D;
+      --green:      #6BCB77;
+      --blue:       #74B3CE;
+      --pink:       #FFB3C1;
+      --bg:         #FFF9F5;
+      --bg2:        #FFF3EC;
+      --text:       #2D2D2D;
+      --muted:      #8A7F7A;
+      --border:     #F0E6DF;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 10% 0%, rgba(255,107,107,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 90% 100%, rgba(116,179,206,0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 50% 50%, rgba(255,217,61,0.05) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hearts {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .heart {
+      position: absolute;
+      opacity: 0;
+      animation: floatHeart linear infinite;
+      font-size: 14px;
+      filter: blur(0.5px);
+    }
+    .heart:nth-child(1)  { left: 8%;   animation-delay: 0s;   animation-duration: 18s; font-size: 10px; }
+    .heart:nth-child(2)  { left: 18%;  animation-delay: 3s;   animation-duration: 22s; font-size: 16px; }
+    .heart:nth-child(3)  { left: 32%;  animation-delay: 7s;   animation-duration: 16s; font-size: 8px;  }
+    .heart:nth-child(4)  { left: 50%;  animation-delay: 1s;   animation-duration: 25s; font-size: 12px; }
+    .heart:nth-child(5)  { left: 65%;  animation-delay: 5s;   animation-duration: 19s; font-size: 10px; }
+    .heart:nth-child(6)  { left: 78%;  animation-delay: 9s;   animation-duration: 21s; font-size: 14px; }
+    .heart:nth-child(7)  { left: 88%;  animation-delay: 2s;   animation-duration: 17s; font-size: 9px;  }
+    .heart:nth-child(8)  { left: 42%;  animation-delay: 12s;  animation-duration: 23s; font-size: 11px; }
+    @keyframes floatHeart {
+      0%   { bottom: -5%; opacity: 0; transform: translateX(0) scale(0.8) rotate(0deg); }
+      10%  { opacity: 0.25; }
+      50%  { transform: translateX(20px) scale(1) rotate(15deg); }
+      90%  { opacity: 0.15; }
+      100% { bottom: 105%; opacity: 0; transform: translateX(-10px) scale(0.9) rotate(-10deg); }
+    }
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    header {
+      position: relative;
+      text-align: center;
+      padding: 60px 0 48px;
+      animation: fadeDown 0.7s ease both;
+    }
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .logo-mark a { text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+    .logo-name {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      color: var(--text);
+      letter-spacing: -0.3px;
+    }
+    .logo-name span { color: var(--coral); }
+    header h1 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: clamp(26px, 5.5vw, 38px);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    header p.subtitle {
+      font-size: 17px;
+      color: var(--muted);
+      font-style: italic;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 32px 0;
+      opacity: 0.5;
+    }
+    .divider-line { flex: 1; height: 1px; background: var(--border); }
+    .divider-heart { color: var(--coral); font-size: 12px; }
+    .section {
+      margin-bottom: 36px;
+      animation: fadeUp 0.5s ease both;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .section-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--coral-soft);
+      color: var(--coral);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+    .section h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--text);
+      letter-spacing: -0.2px;
+    }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .faq-item p {
+      font-size: 15px;
+      color: #4A4240;
+      margin-bottom: 0;
+    }
+    .highlight {
+      border-left: 3px solid var(--coral);
+      background: var(--coral-soft);
+      border-radius: 0 12px 12px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 15px;
+      color: var(--text);
+    }
+    .highlight a {
+      color: var(--coral);
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .highlight a:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      font-family: 'Quicksand', sans-serif;
+    }
+    footer strong { color: var(--coral); }
+    footer a {
+      color: var(--coral);
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecting to <a href="/">support page</a>&hellip;</p>
+  <div class="hearts" aria-hidden="true">
+    <div class="heart">&#9825;</div>
+    <div class="heart">&#9825;</div>
+    <div class="heart">&#9825;</div>
+    <div class="heart">&#9825;</div>
+    <div class="heart">&#9825;</div>
+    <div class="heart">&#9825;</div>
+    <div class="heart">&#9825;</div>
+    <div class="heart">&#9825;</div>
+  </div>
+  <div class="wrapper">
+    <header>
+      <div class="logo-mark">
+        <a href="/">
+          <svg width="52" height="40" viewBox="0 0 52 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <radialGradient id="leftGrad" cx="40%" cy="40%" r="60%">
+                <stop offset="0%" stop-color="#FF8C8C"/>
+                <stop offset="100%" stop-color="#F06060"/>
+              </radialGradient>
+              <radialGradient id="rightGrad" cx="40%" cy="35%" r="60%">
+                <stop offset="0%" stop-color="#82CEDE"/>
+                <stop offset="100%" stop-color="#5AAECC"/>
+              </radialGradient>
+            </defs>
+            <circle cx="20" cy="20" r="13" fill="white"/>
+            <circle cx="20" cy="20" r="12" fill="url(#leftGrad)"/>
+            <circle cx="32" cy="20" r="13" fill="white"/>
+            <circle cx="32" cy="20" r="12" fill="url(#rightGrad)"/>
+            <circle cx="43" cy="30" r="4" fill="white"/>
+            <circle cx="43" cy="30" r="3" fill="#6BCB77"/>
+          </svg>
+          <span class="logo-name">Baby Names <span>for Couples</span></span>
+        </a>
+      </div>
+      <h1>How can we help?</h1>
+      <p class="subtitle">Answers to common questions about using Baby Names for Couples.</p>
+    </header>
+
+    <div class="divider"><div class="divider-line"></div><div class="divider-heart">&hearts;</div><div class="divider-line"></div></div>
+
+    <!-- Getting started -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#9825;</div>
+        <h2>Getting started</h2>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I start using the app?</h3>
+        <p>Download Baby Names for Couples from the App Store. Open it and choose whether you are looking for boy names, girl names, or both. Pick a collection and start swiping. No account or sign-up is needed.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do I need to create an account?</h3>
+        <p>No. The app uses anonymous device-based identity. There is no sign-up form, email address, or login screen. You download the app and start immediately.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is the app free?</h3>
+        <p>Yes. Baby Names for Couples is free to download and use. There are no subscriptions and no ads.</p>
+      </div>
+    </div>
+
+    <div class="divider"><div class="divider-line"></div><div class="divider-heart">&hearts;</div><div class="divider-line"></div></div>
+
+    <!-- Pairing -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#128279;</div>
+        <h2>Pairing with a partner</h2>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I connect with my partner?</h3>
+        <p>Tap the partner icon in the app and share an invite link with your partner by text, email, or any messaging app. Your partner taps the link and you are connected. Everything syncs from that point.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do both of us need to download the app?</h3>
+        <p>To get name matches, both partners download the app on their own iPhone. One shares an invite link and the other taps it to connect.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I use the app without a partner?</h3>
+        <p>Yes. Solo mode gives you full access to swiping, pronunciation audio, popularity trends, and your own favourites list. You can connect with a partner later without losing anything you have saved.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What happens if I disconnect from my partner?</h3>
+        <p>You can disconnect from the Profile screen at any time. Your swipe history, matches, and favourites are all preserved. If you reconnect later, everything carries over.</p>
+      </div>
+    </div>
+
+    <div class="divider"><div class="divider-line"></div><div class="divider-heart">&hearts;</div><div class="divider-line"></div></div>
+
+    <!-- Swiping and matches -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#10024;</div>
+        <h2>Swiping and matches</h2>
+      </div>
+
+      <div class="faq-item">
+        <h3>How does matching work?</h3>
+        <p>Each partner swipes through names independently. Swipe right to love a name, left to pass. When both partners swipe right on the same name, it is a match and the name is added to your shared matches list.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can my partner see which names I swiped on?</h3>
+        <p>No. Individual swipes are private. The only names visible to both partners are mutual matches. Your "I Liked" tab shows names you loved and your partner's status (not yet seen, loved, or passed), but your partner does not see a corresponding view.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I suggest a name to my partner?</h3>
+        <p>Yes. Suggest a name and it appears in your partner's next few cards so they see it sooner. They still swipe on it independently.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I undo a swipe?</h3>
+        <p>Swipes cannot be undone individually. If you accidentally passed on a name, you may encounter it again if you reset a collection or if your partner suggests it to you.</p>
+      </div>
+    </div>
+
+    <div class="divider"><div class="divider-line"></div><div class="divider-heart">&hearts;</div><div class="divider-line"></div></div>
+
+    <!-- Data and privacy -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#128274;</div>
+        <h2>Data and privacy</h2>
+      </div>
+
+      <div class="faq-item">
+        <h3>What data does the app collect?</h3>
+        <p>Baby Names for Couples collects the minimum data needed to provide the service: an anonymous device identifier, your name preferences, swipe history, and partner connection data. No personal information such as your name, email, or location is collected. See our <a href="/privacy" style="color: var(--coral);">Privacy Policy</a> for full details.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I delete my data?</h3>
+        <p>Go to the Profile tab, scroll to the Account section, and tap "Delete Account." This permanently removes your display name, swipe history, matches, and connection data from our servers. This action cannot be undone. You can also email us and we will delete your data within 30 days.</p>
+      </div>
+    </div>
+
+    <div class="divider"><div class="divider-line"></div><div class="divider-heart">&hearts;</div><div class="divider-line"></div></div>
+
+    <!-- Something not working -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#128295;</div>
+        <h2>Something not working?</h2>
+      </div>
+
+      <div class="faq-item">
+        <p>If you run into a problem, we want to know about it. When you email us, it helps to include your device model (e.g. iPhone 15), iOS version (e.g. iOS 18.4), and a brief description of what happened. A screenshot is always helpful too.</p>
+      </div>
+    </div>
+
+    <div class="divider"><div class="divider-line"></div><div class="divider-heart">&hearts;</div><div class="divider-line"></div></div>
+
+    <!-- Contact -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#128172;</div>
+        <h2>Still need help?</h2>
+      </div>
+
+      <div class="highlight">
+        <a href="mailto:help@babynamesforcouples.com">Email us at help@babynamesforcouples.com</a>
+      </div>
+      <p style="font-size: 15px; color: #4A4240;">We aim to respond within 48 hours.</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 48px;">
+      <a href="/" style="display: inline-block; background: linear-gradient(135deg, var(--coral) 0%, #FF9494 100%); color: white; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 15px; text-decoration: none; padding: 13px 32px; border-radius: 100px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 16px rgba(255,107,107,0.25);">&larr; Back to Baby Names for Couples</a>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 <strong>Baby Names for Couples</strong>. Made with &hearts; for parents everywhere.</p>
+      <p style="margin-top: 8px;">
+        <a href="/how-it-works">How it works</a> &middot;
+        <a href="/privacy">Privacy Policy</a> &middot;
+        <a href="/terms">Terms of Use</a> &middot;
+        <a href="mailto:help@babynamesforcouples.com">Contact</a>
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
