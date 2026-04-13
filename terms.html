@@ -209,7 +209,7 @@
       gap: 14px;
       margin-bottom: 14px;
     }
-    .section-number {
+    .section-number, .section-icon {
       width: 32px;
       height: 32px;
       background: var(--coral-soft);
@@ -222,6 +222,11 @@
       font-weight: 700;
       font-size: 13px;
       flex-shrink: 0;
+    }
+    .section-icon {
+      font-size: 15px;
+      font-family: inherit;
+      font-weight: normal;
     }
     .section h2 {
       font-family: 'Quicksand', sans-serif;
@@ -253,6 +258,13 @@
       font-size: 15px;
       color: var(--text);
     }
+    .highlight a {
+      color: var(--coral);
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .highlight a:hover { text-decoration: underline; }
     .highlight.green {
       border-color: var(--green);
       background: #F0FAF1;
@@ -260,44 +272,6 @@
     .highlight.blue {
       border-color: var(--blue);
       background: #F0F7FA;
-    }
-    .contact-card {
-      background: linear-gradient(135deg, var(--coral) 0%, #FF9494 100%);
-      border-radius: 20px;
-      padding: 32px;
-      text-align: center;
-      color: white;
-      margin-top: 48px;
-      box-shadow: 0 8px 32px rgba(255,107,107,0.25);
-      animation: fadeUp 0.6s 0.5s ease both;
-    }
-    .contact-card h2 {
-      font-family: 'Quicksand', sans-serif;
-      font-weight: 700;
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-    .contact-card p {
-      font-size: 15px;
-      opacity: 0.9;
-      margin-bottom: 20px;
-      font-style: italic;
-    }
-    .contact-card a {
-      display: inline-block;
-      background: white;
-      color: var(--coral);
-      font-family: 'Quicksand', sans-serif;
-      font-weight: 700;
-      font-size: 15px;
-      text-decoration: none;
-      padding: 11px 28px;
-      border-radius: 100px;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .contact-card a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     }
     footer {
       text-align: center;
@@ -566,16 +540,32 @@
       <p>For any legal notices, questions about these Terms, or concerns about the App, you can reach us at <a href="mailto:help@babynamesforcouples.com" style="color: var(--coral);"><strong>help@babynamesforcouples.com</strong></a>.</p>
     </div>
 
-    <div class="contact-card">
-      <h2>Questions about these terms?</h2>
-      <p>We&rsquo;re happy to explain anything that&rsquo;s unclear. Get in touch any time.</p>
-      <a href="mailto:help@babynamesforcouples.com">help@babynamesforcouples.com</a>
-      <p style="opacity: 0.85; margin-top: 20px; margin-bottom: 12px; font-size: 14px;">You can also read our privacy policy or visit support.</p>
-      <a href="/privacy" style="background: rgba(255,255,255,0.2); color: white; border: 1.5px solid rgba(255,255,255,0.6); margin-right: 8px;">Privacy Policy</a>
-      <a href="/" style="background: rgba(255,255,255,0.2); color: white; border: 1.5px solid rgba(255,255,255,0.6);">Support</a>
+    <div class="divider"><div class="divider-line"></div><div class="divider-heart">&hearts;</div><div class="divider-line"></div></div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">&#128172;</div>
+        <h2>Still need help?</h2>
+      </div>
+
+      <div class="highlight">
+        <a href="mailto:help@babynamesforcouples.com">Email us at help@babynamesforcouples.com</a>
+      </div>
+      <p style="font-size: 15px; color: #4A4240;">We aim to respond within 48 hours.</p>
     </div>
+
+    <div style="text-align: center; margin-top: 48px;">
+      <a href="/" style="display: inline-block; background: linear-gradient(135deg, var(--coral) 0%, #FF9494 100%); color: white; font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 15px; text-decoration: none; padding: 13px 32px; border-radius: 100px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 16px rgba(255,107,107,0.25);">&larr; Back to Baby Names for Couples</a>
+    </div>
+
     <footer>
       <p>&copy; 2026 <strong>Baby Names for Couples</strong>. Made with &hearts; for parents everywhere.</p>
+      <p style="margin-top: 8px;">
+        <a href="/how-it-works">How it works</a> &middot;
+        <a href="/privacy">Privacy Policy</a> &middot;
+        <a href="/support">Support</a> &middot;
+        <a href="mailto:help@babynamesforcouples.com">Contact</a>
+      </p>
     </footer>
   </div>
 </body>
